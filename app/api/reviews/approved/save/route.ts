@@ -31,7 +31,7 @@ export async function POST(request: Request) {
     if (toAdd.length > 0) {
       const { error: insertError } = await supabase
         .from("approved_reviews")
-        .insert(
+        .upsert(
           toAdd.map((id) => ({ review_id: id })),
           { onConflict: "review_id" }
         );
