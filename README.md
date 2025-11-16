@@ -5,8 +5,7 @@ A modern dashboard for managing and displaying guest reviews for Flex Living pro
 ## Tech Stack
 
 - **Next.js 14** (App Router) with TypeScript
-- **Tailwind CSS** for styling
-- **React Query** for data fetching
+- **Shadcn / Tailwind CSS** for styling
 - **Supabase** for database (PostgreSQL)
 - **Recharts** for data visualization
 
