@@ -7,7 +7,7 @@ A modern dashboard for managing and displaying guest reviews for Flex Living pro
 - **Next.js 14** (App Router) with TypeScript
 - **Tailwind CSS** for styling
 - **React Query** for data fetching
-- **Prisma** (to be configured) for database
+- **Supabase** for database (PostgreSQL)
 - **Recharts** for data visualization
 
 ## Getting Started
@@ -54,11 +54,42 @@ theflex/
 Create a `.env.local` file in the root directory:
 
 ```
+# Hostaway API (optional - defaults provided)
 HOSTAWAY_ACCOUNT_ID=61148
 HOSTAWAY_API_KEY=f94377ebbbb479490bb3ec364649168dc443dda2e4830facaf5de2e74ccc9152
+
+# Supabase (required for approved reviews persistence)
+NEXT_PUBLIC_SUPABASE_URL=https://[YOUR-PROJECT-REF].supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=[YOUR-ANON-KEY]
 ```
 
-**Note:** The app will use default values if these are not set, but it's recommended to create the `.env.local` file for proper configuration.
+### Setting up Supabase
+
+1. Create a new project at [supabase.com](https://supabase.com)
+2. Go to Project Settings → API
+3. Copy your **Project URL** and **anon/public key**
+4. Add them to your `.env.local` file
+5. Go to SQL Editor in Supabase dashboard
+6. Run the SQL from `supabase-schema.sql` to create the `approved_reviews` table:
+   ```sql
+   CREATE TABLE IF NOT EXISTS approved_reviews (
+     id SERIAL PRIMARY KEY,
+     review_id INTEGER UNIQUE NOT NULL,
+     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+     updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+   );
+   
+   CREATE INDEX IF NOT EXISTS idx_approved_reviews_review_id ON approved_reviews(review_id);
+   
+   ALTER TABLE approved_reviews ENABLE ROW LEVEL SECURITY;
+   
+   CREATE POLICY "Allow all operations on approved_reviews" ON approved_reviews
+     FOR ALL
+     USING (true)
+     WITH CHECK (true);
+   ```
+
+**Note:** The app will fall back to localStorage if Supabase is not configured, but database persistence is recommended for production.
 
 ## Development
 
