@@ -15,8 +15,8 @@ export function PropertyImageGallery({ images }: PropertyImageGalleryProps) {
   return (
     <div className="grid grid-cols-2 gap-2 mb-8" style={{ minHeight: "600px" }}>
       {/* Main large image on the left */}
-      <div className="row-span-2">
-        <div className="h-full rounded-lg overflow-hidden bg-gray-200 relative" style={{ minHeight: "600px" }}>
+      <div className="row-span-2 overflow-hidden">
+        <div className="h-full rounded-lg overflow-hidden bg-gray-200 relative" style={{ minHeight: "600px", height: "calc(100% - 8px)" }}>
           <Image
             src={mainImage}
             alt="Property main view"
