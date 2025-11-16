@@ -1,5 +1,3 @@
--- Run this SQL in your Supabase SQL Editor to create the approved_reviews table
-
 CREATE TABLE IF NOT EXISTS approved_reviews (
   id SERIAL PRIMARY KEY,
   review_id INTEGER UNIQUE NOT NULL,

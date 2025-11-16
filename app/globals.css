@@ -5,7 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --flex-green: #1a4d3a;
+  --flex-green: rgb(40 78 76);
   --flex-green-light: #2d6b4f;
   --flex-beige: #f5f1eb;
   --flex-white: #ffffff;

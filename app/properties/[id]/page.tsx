@@ -65,7 +65,7 @@ async function getPropertyData(propertyUrlId: string): Promise<any> {
       bathrooms: 1,
       beds: 3,
       description:
-        "This spacious apartment is in a great spot. It&apos;s close to shops, cafes, and transport. Inside, you&apos;ll find plenty of space and everything you need for a comfortable stay - a nice kitchen, cozy living area, and good Wi-Fi. I keep the place clean and tidy, so you can relax and enjoy your time in London. The location is perfect for exploring the city, with easy access to public transport and lots of great places to eat and drink nearby.",
+        "This spacious apartment is in a great spot. It's close to shops, cafes, and transport. Inside, you'll find plenty of space and everything you need for a comfortable stay - a nice kitchen, cozy living area, and good Wi-Fi. I keep the place clean and tidy, so you can relax and enjoy your time in London. The location is perfect for exploring the city, with easy access to public transport and lots of great places to eat and drink nearby.",
       amenities: [
         "Cable TV",
         "Internet",
@@ -239,18 +239,13 @@ export default function PropertyDetailPage({
             </div>
 
             {/* Right Column - Sticky Booking Widget */}
-            <div className="lg:col-span-1">
-              <div className="sticky top-8">
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                  <PropertyBookingWidget />
-                  <div className="bg-gray-50 p-4 text-center">
-                    <p className="text-xs text-gray-600">
-                      Instant booking confirmation
-                    </p>
+              <div className="lg:col-span-1">
+                <div className="sticky top-8">
+                  <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <PropertyBookingWidget />
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </main>

@@ -7,8 +7,11 @@ import { PropertyHeader } from "@/components/PropertyHeader";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Flex Living - Reviews Dashboard",
+  title: "The Flex",
   description: "Manager dashboard for reviewing and managing guest reviews",
+  icons: {
+    icon: "/theflex-icon.png",
+  },
 };
 
 export default function RootLayout({

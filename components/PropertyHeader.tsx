@@ -1,27 +1,23 @@
 import Link from "next/link";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export function PropertyHeader() {
   return (
-    <header className="bg-[#1a4d3a] text-white shadow-lg">
+    <header className={`bg-[rgb(40,78,76)] text-white shadow-lg ${inter.className}`}>
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-white rounded flex items-center justify-center">
-              <svg
-                className="w-5 h-5 text-[#1a4d3a]"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                />
-              </svg>
-            </div>
-            <span className="text-xl font-semibold">the flex.</span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/theflex-logo-white.webp"
+              alt="the flex."
+              width={120}
+              height={40}
+              className="h-10 w-auto object-contain"
+              priority
+            />
           </Link>
           <nav className="flex items-center gap-6">
             <Link

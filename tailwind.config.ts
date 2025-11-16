@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        "flex-green": "#1a4d3a",
+        "flex-green": "rgb(40 78 76)",
         "flex-green-light": "#2d6b4f",
         "flex-beige": "#f5f1eb",
       },
