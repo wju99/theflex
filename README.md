@@ -60,35 +60,8 @@ Create a `.env.local` file in the root directory:
 # Supabase (required for approved reviews persistence)
 NEXT_PUBLIC_SUPABASE_URL=https://[YOUR-PROJECT-REF].supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=[YOUR-ANON-KEY]
+
 ```
-
-### Setting up Supabase
-
-1. Create a new project at [supabase.com](https://supabase.com)
-2. Go to Project Settings → API
-3. Copy your **Project URL** and **anon/public key**
-4. Add them to your `.env.local` file
-5. Go to SQL Editor in Supabase dashboard
-6. Run the SQL from `supabase-schema.sql` to create the `approved_reviews` table:
-   ```sql
-   CREATE TABLE IF NOT EXISTS approved_reviews (
-     id SERIAL PRIMARY KEY,
-     review_id INTEGER UNIQUE NOT NULL,
-     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-     updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
-   );
-   
-   CREATE INDEX IF NOT EXISTS idx_approved_reviews_review_id ON approved_reviews(review_id);
-   
-   ALTER TABLE approved_reviews ENABLE ROW LEVEL SECURITY;
-   
-   CREATE POLICY "Allow all operations on approved_reviews" ON approved_reviews
-     FOR ALL
-     USING (true)
-     WITH CHECK (true);
-   ```
-
-**Note:** The app will fall back to localStorage if Supabase is not configured, but database persistence is recommended for production.
 
 ## Key Design and Logic Decisions
 
