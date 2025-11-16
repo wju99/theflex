@@ -1,0 +1,138 @@
+{
+  "status": "success",
+  "result": [
+    {
+      "id": 7453,
+      "type": "host-to-guest",
+      "status": "published",
+      "rating": null,
+      "publicReview": "Shane and family are wonderful! Would definitely host again :)",
+      "reviewCategory": [
+        {
+          "category": "cleanliness",
+          "rating": 10
+        },
+        {
+          "category": "communication",
+          "rating": 10
+        },
+        {
+          "category": "respect_house_rules",
+          "rating": 10
+        }
+      ],
+      "submittedAt": "2020-08-21 22:45:14",
+      "guestName": "Shane Finkelstein",
+      "listingName": "2B N1 A - 29 Shoreditch Heights"
+    },
+    {
+      "id": 7454,
+      "type": "guest-to-host",
+      "status": "published",
+      "rating": 5,
+      "publicReview": "Amazing stay! The apartment was spotless and the location was perfect. Highly recommend!",
+      "reviewCategory": [
+        {
+          "category": "cleanliness",
+          "rating": 10
+        },
+        {
+          "category": "location",
+          "rating": 10
+        },
+        {
+          "category": "value",
+          "rating": 9
+        },
+        {
+          "category": "communication",
+          "rating": 10
+        }
+      ],
+      "submittedAt": "2024-01-15 14:30:00",
+      "guestName": "Sarah Johnson",
+      "listingName": "Airbnb - 2B N1 A - 29 Shoreditch Heights"
+    },
+    {
+      "id": 7455,
+      "type": "guest-to-host",
+      "status": "published",
+      "rating": 4,
+      "publicReview": "Nice place overall, but the WiFi was a bit slow. Everything else was great!",
+      "reviewCategory": [
+        {
+          "category": "cleanliness",
+          "rating": 8
+        },
+        {
+          "category": "communication",
+          "rating": 9
+        },
+        {
+          "category": "value",
+          "rating": 7
+        }
+      ],
+      "submittedAt": "2024-02-20 10:15:00",
+      "guestName": "Michael Chen",
+      "listingName": "Booking.com - 3B N2 B - 45 Brick Lane"
+    },
+    {
+      "id": 7456,
+      "type": "guest-to-host",
+      "status": "published",
+      "rating": 5,
+      "publicReview": "Perfect location in the heart of Shoreditch! The apartment was exactly as described. Will definitely book again.",
+      "reviewCategory": [
+        {
+          "category": "cleanliness",
+          "rating": 10
+        },
+        {
+          "category": "location",
+          "rating": 10
+        },
+        {
+          "category": "value",
+          "rating": 10
+        },
+        {
+          "category": "communication",
+          "rating": 10
+        },
+        {
+          "category": "check_in",
+          "rating": 10
+        }
+      ],
+      "submittedAt": "2024-03-10 16:45:00",
+      "guestName": "Emma Williams",
+      "listingName": "VRBO - 2B N1 A - 29 Shoreditch Heights"
+    },
+    {
+      "id": 7457,
+      "type": "guest-to-host",
+      "status": "published",
+      "rating": 3,
+      "publicReview": "The apartment was okay, but there were some maintenance issues that need attention. The host was responsive though.",
+      "reviewCategory": [
+        {
+          "category": "cleanliness",
+          "rating": 6
+        },
+        {
+          "category": "communication",
+          "rating": 8
+        },
+        {
+          "category": "value",
+          "rating": 5
+        }
+      ],
+      "submittedAt": "2024-03-25 09:20:00",
+      "guestName": "David Martinez",
+      "listingName": "2B N1 A - 29 Shoreditch Heights"
+    }
+  ]
+}
+
