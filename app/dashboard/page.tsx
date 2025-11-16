@@ -7,6 +7,7 @@ import { DashboardOverview } from "@/components/DashboardOverview";
 import { PropertyPerformance } from "@/components/PropertyPerformance";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { TrendsAnalysis } from "@/components/TrendsAnalysis";
+import { DashboardSkeleton } from "@/components/DashboardSkeleton";
 import { NormalizedReview } from "@/types/review";
 import { useApprovedReviews } from "@/contexts/ApprovedReviewsContext";
 
@@ -99,14 +100,7 @@ export default function DashboardPage() {
   };
 
   if (isLoading) {
-    return (
-      <div className="flex-1 flex items-center justify-center bg-[#f5f1eb]">
-        <div className="text-center">
-          <div className="text-xl text-gray-700 mb-2">Loading reviews...</div>
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#1a4d3a] mx-auto"></div>
-        </div>
-      </div>
-    );
+    return <DashboardSkeleton />;
   }
 
   if (isError && error) {
